@@ -2,12 +2,15 @@
 The client detect library creates a client object with information about devices, browsers, operating systems and feature support. This facilitates cross compatibility.
 
 ### Browsers
-- Edge
-- Chrome
-- Opera
-- Firefox
-- Safari
-- Internet Explorer
+ - Edge
+ - Chrome
+ - Opera
+ - Firefox
+ - Safari
+ - Internet Explorer
+	 - IE 11
+	 - IE 10
+	 - IE 9
 
 ## Installation
 1. Get the minified version of the library from the '/dist' folder.
