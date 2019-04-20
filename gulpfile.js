@@ -3,8 +3,6 @@ const gulp = require('gulp'),
     rename = require('gulp-rename'),
     browserSync = require('browser-sync').create();
 
-
-
 gulp.task('minify-script', function () {
     return gulp.src('src/*.js')
         .pipe(rename(function (dir, base, ext) {
