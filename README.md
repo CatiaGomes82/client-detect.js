@@ -17,6 +17,12 @@ The client detect library creates a client object with information about devices
  - Tablet
  - Mobile
 
+ ### Operating Systems
+ - Mac
+ - Windows
+ - iOs
+ - Android
+
 ## Installation
 1. Get the minified version of the library from the '/dist' folder.
 2. Add file to the page. Example:
