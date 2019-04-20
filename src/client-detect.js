@@ -22,10 +22,7 @@
             },
         
             init = function () {
-                window.clientDetect = clientDetect;
-                alert(winNav.userAgent)
-                alert('IE ' + clientDetect.isIE + ';chrome ' + clientDetect.isChrome + ';safari ' + clientDetect.isSafari + ';firefox ' + clientDetect.isFirefox + ';edge ' + clientDetect.isEdge)
-                console.log(clientDetect);            
+                window.clientDetect = clientDetect;           
             }
 
         return {

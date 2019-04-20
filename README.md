@@ -1,33 +1,26 @@
 # client-detect.js
-The client detect library creates a client object  with information about devices, browsers, operating systems and feature support. This facilitates cross compatibility.
+The client detect library creates a client object with information about devices, browsers, operating systems and feature support. This facilitates cross compatibility.
 
 ### Browsers
- - Edge
- - Chrome
- - Opera
-
-### Devices
-
-### Feature support
-
-
+- Edge
+- Chrome
+- Opera
+- Firefox
+- Safari
+- Internet Explorer
 
 ## Installation
-
- 1. Get the minified version of the library in the '/dist' folder.
- 2. Add file to the page. Example:
+1. Get the minified version of the library from the '/dist' folder.
+2. Add file to the page. Example:
 ```
-<script>
+<script src="/src/client-detect.js"></script>
 ```
-3. Initialise library
+3. Initialise library and you will be able to access the 'clientDetect' object
 ```
-<script>
+client.init();
+console.log(clientDetect)
 ```
-4. 
-Initialise library
-
-
+ 
 ## Release information
-
 #### 1.0.0
 Initial version
