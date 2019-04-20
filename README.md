@@ -12,6 +12,11 @@ The client detect library creates a client object with information about devices
 	 - IE 10
 	 - IE 9
 
+### Devices
+ - Desktop
+ - Tablet
+ - Mobile
+
 ## Installation
 1. Get the minified version of the library from the '/dist' folder.
 2. Add file to the page. Example:

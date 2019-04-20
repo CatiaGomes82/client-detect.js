@@ -12,22 +12,39 @@
             isOldIe = userAgent.indexOf('MSIE') > -1,
             isIe = isOldIe || isIe11,
             isChrome = (userAgent.indexOf('Chrome') > -1 && !isEdge && !isOpera) || isIosChrome,
+            isMobile = /mobile|iphone|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase()) && userAgent.indexOf('iPad') === -1,
+            isTablet = /android|ipad|iemobile|opera mini/i.test(userAgent.toLowerCase()) && !isMobile,
+            isDesktop = !isMobile && !isTablet,
             clientDetect = {
-                isChrome: isChrome,
-                isOpera: isOpera,
-                isEdge: isEdge && !isSafari,
-                isSafari: isSafari && !isChrome,
-                isFirefox: isFirefox,
-                isIE: isIe,
-                isIE11: isIe11,
-                isIE10: isIe10,
-                isIE9: isIe9,
-                isOldIE: isOldIe
-            },
-        
-            init = function () {
-                window.clientDetect = clientDetect;           
+                Chrome: isChrome,
+                Opera: isOpera,
+                Edge: isEdge && !isSafari,
+                Safari: isSafari && !isChrome,
+                Firefox: isFirefox,
+                IE: isIe,
+                IE11: isIe11,
+                IE10: isIe10,
+                IE9: isIe9,
+                OldIE: isOldIe,
+                Desktop: isDesktop,
+                Tablet: isTablet,
+                Mobile: isMobile
+            };
+
+        function setBodyClasses () {
+            var classes = [];
+            for (var prop in clientDetect) {
+                if (clientDetect[prop]) {
+                    classes.push(prop.toLowerCase());
+                }
             }
+            document.documentElement.className += classes.join(' ');
+        }
+
+        function init() {
+            setBodyClasses();
+            window.clientDetect = clientDetect;
+        }
 
         return {
             init: init
